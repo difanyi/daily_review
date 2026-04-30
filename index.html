@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>每日复盘</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>每日复盘</h1>
+      <p class="hint">每天花 5 分钟，持续进步。</p>
+
+      <form id="reviewForm">
+        <label>
+          日期
+          <input type="date" id="date" required />
+        </label>
+
+        <label>
+          今天做得好的事
+          <textarea id="wins" rows="4" placeholder="例如：按计划完成核心任务"></textarea>
+        </label>
+
+        <label>
+          今天遇到的问题
+          <textarea id="issues" rows="4" placeholder="例如：会议过多导致专注时间不足"></textarea>
+        </label>
+
+        <label>
+          问题改进方案
+          <textarea id="improvements" rows="4" placeholder="例如：把会议集中到下午"></textarea>
+        </label>
+
+        <label>
+          明日三件最重要的事
+          <textarea id="tomorrow" rows="4" placeholder="1. ...\n2. ...\n3. ..."></textarea>
+        </label>
+
+        <div class="actions">
+          <button type="submit">保存</button>
+          <button type="button" id="exportBtn" class="secondary">导出 JSON</button>
+          <button type="button" id="clearBtn" class="danger">清空当天记录</button>
+        </div>
+      </form>
+
+      <section class="history">
+        <h2>历史记录</h2>
+        <ul id="historyList"></ul>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
